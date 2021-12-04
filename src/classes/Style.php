@@ -126,4 +126,33 @@ class Style {
 	public static function get_reset_sequence() : string {
 		return Chalk::get_escape_sequence( static::NONE );
 	}
+
+	/**
+	 * Gets a style code.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  string $style Style name.
+	 *
+	 * @return string        Style code.
+	 */
+	public static function code( string $style ) : string {
+		switch ( strtolower( $style ) ) {
+			case 'bold':
+			case 'bright':
+				return static::BOLD;
+			case 'dim':
+				return static::DIM;
+			case 'underline':
+				return static::UNDERLINED;
+			case 'blink':
+				return static::BLINK;
+			case 'invert':
+				return static::INVERTED;
+			case 'hide':
+				return static::HIDDEN;
+			default:
+				return static::NONE;
+		}
+	}
 }

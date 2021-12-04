@@ -80,4 +80,52 @@ class Bg_Color {
 	public static function get_reset_sequence() : string {
 		return Chalk::get_escape_sequence( static::NONE );
 	}
+
+	/**
+	 * Gets a background color code.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  string $color Color name.
+	 *
+	 * @return string        Background color code.
+	 */
+	public static function code( string $color ) : string {
+		switch ( strtolower( $color ) ) {
+			case 'black':
+				return static::BLACK;
+			case 'red':
+				return static::RED;
+			case 'green':
+				return static::GREEN;
+			case 'yellow':
+				return static::YELLOW;
+			case 'blue':
+				return static::BLUE;
+			case 'magenta':
+				return static::MAGENTA;
+			case 'cyan':
+				return static::CYAN;
+			case 'light-gray':
+				return static::LIGHT_GRAY;
+			case 'dark-gray':
+				return static::DARK_GRAY;
+			case 'light-red':
+				return static::LIGHT_RED;
+			case 'light-green':
+				return static::LIGHT_GREEN;
+			case 'light-yellow':
+				return static::LIGHT_YELLOW;
+			case 'light-blue':
+				return static::LIGHT_BLUE;
+			case 'light-magenta':
+				return static::LIGHT_MAGENTA;
+			case 'light-cyan':
+				return static::LIGHT_CYAN;
+			case 'white':
+				return static::WHITE;
+			default:
+				return static::NONE;
+		}
+	}
 }

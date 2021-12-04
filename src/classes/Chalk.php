@@ -53,12 +53,13 @@ class Chalk {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string    $string String.
-	 * @param  int|Style $style  Styles.
+	 * @param  string          $string String.
+	 * @param  int|array|Style $style  Styles.
 	 *
-	 * @return string            Styled string.
+	 * @return string                  Styled string.
 	 */
 	public static function style( string $string, $style ) : string {
+		$style           = is_array( $style ) ? new Style( $style ) : $style;
 		$escape_sequence = $style instanceof Style ? $style->get_escape_sequence() : static::get_escape_sequence( $style );
 		$reset_sequence  = $style instanceof Style ? Style::get_reset_sequence() : static::get_reset_sequence( $style );
 
@@ -86,6 +87,7 @@ class Chalk {
 		while ( false !== $_open_tag = strpos( $string, '{' ) ) {
 			$_style = array_key_exists( $_i, $styles ) ? $styles[ $_i ] : end( $styles );
 
+			$_style           = is_array( $_style ) ? new Style( $_style ) : $_style;
 			$_escape_sequence = $_style instanceof Style ? $_style->get_escape_sequence() : static::get_escape_sequence( $_style );
 			$_reset_sequence  = $_style instanceof Style ? Style::get_reset_sequence() : static::get_reset_sequence( $_style );
 
