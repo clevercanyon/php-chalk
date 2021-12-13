@@ -1,7 +1,7 @@
 {
 	"license": "MIT",
-	"name": "clevercanyon/clevercanyon-php-chalk",
-	"description": "A tool to style terminal output.",
+	"name": "clevercanyon/php-chalk",
+	"description": "A tool to style terminal output using PHP.",
 	"authors": [
 		{
 			"name": "Martin Pettersson",
@@ -24,38 +24,9 @@
 	"require": {
 		"php": "^7.4 || ^8.0"
 	},
-	"require-dev": {
-		"clevercanyon/clevercanyon-php-standards": "dev-main"
-	},
 	"autoload": {
 		"psr-4": {
 			"Clever_Canyon\\Chalk\\": "./src/classes"
-		}
-	},
-	"extra": {
-		"props": {
-			"brand": {
-				"data": {
-					"slug": "clevercanyon"
-				},
-				"aws": {
-					"s3": {
-						"bucket": "clevercanyon",
-						"cdn_domain": "cdn.clevercanyon.com"
-					}
-				}
-			}
-		},
-		"props-dev": {
-			"dev_json_map": {
-				"brand": {
-					"aws": {
-						"s3": {
-							"hash_hmac_key_path": "clevercanyon.aws.s3.hash_hmac_key"
-						}
-					}
-				}
-			}
 		}
 	}
 }

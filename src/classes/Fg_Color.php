@@ -31,7 +31,7 @@
  * @author             CLEVER CANYON LLC
  * @copyright          2021 CLEVER CANYON LLC
  * @license            MIT
- * @link               https://github.com/clevercanyon/clevercanyon-php-chalk
+ * @link               https://github.com/clevercanyon/php-chalk
  */
 namespace Clever_Canyon\Chalk;
 
