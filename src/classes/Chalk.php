@@ -53,8 +53,8 @@ class Chalk {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string          $string String.
-	 * @param  int|array|Style $style  Styles.
+	 * @param string          $string String.
+	 * @param int|array|Style $style  Styles.
 	 *
 	 * @return string                  Styled string.
 	 */
@@ -71,8 +71,8 @@ class Chalk {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $string String.
-	 * @param  array  $styles Styles.
+	 * @param string $string String.
+	 * @param array  $styles Styles.
 	 *
 	 * @return string         Parsed string.
 	 */
@@ -109,7 +109,7 @@ class Chalk {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  int $style Style.
+	 * @param int $style Style.
 	 *
 	 * @return string     Escape sequence.
 	 */
@@ -122,7 +122,7 @@ class Chalk {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  int|null $style Style.
+	 * @param int|null $style Style.
 	 *
 	 * @return string          Escape sequence.
 	 */
@@ -147,12 +147,12 @@ class Chalk {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $color     Color.
-	 * @param  array  $arguments Arguments.
+	 * @param string $color     Color.
+	 * @param array  $arguments Arguments.
 	 *
 	 * @return string            Styled string.
 	 *
-	 * @internal The color is caSe-insensitive, and this only works for colors.
+	 * @note  The color is caSe-insensitive, and this only works for colors.
 	 */
 	public static function __callStatic( $color, $arguments ) : string {
 		$color_constant = strtoupper( $color );
@@ -164,6 +164,6 @@ class Chalk {
 		if ( empty( $arguments ) ) {
 			trigger_error( 'Warning: Missing argument 1 for ' . static::class . '::' . $color . '()', E_USER_WARNING ); // phpcs:ignore -- error ok.
 		}
-		return static::style( $arguments[0], $reflection->getConstant( $color_constant ) );
+		return static::style( $arguments[ 0 ], $reflection->getConstant( $color_constant ) );
 	}
 }
