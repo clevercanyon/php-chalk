@@ -38,20 +38,20 @@ namespace Clever_Canyon\Chalk;
 /**
  * Chalk.
  *
- * @since 1.0.0
+ * @since 2021-12-15
  */
 class Chalk {
 	/**
 	 * The terminal color escape sequence with color replace tag.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 */
 	public const ESCAPE_SEQUENCE = "\033[STYLEm";
 
 	/**
 	 * Styles string.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @param string          $string String.
 	 * @param int|array|Style $style  Styles.
@@ -69,7 +69,7 @@ class Chalk {
 	/**
 	 * Parses the given string and inserts the color tags replacing the placeholders.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @param string $string String.
 	 * @param array  $styles Styles.
@@ -107,7 +107,7 @@ class Chalk {
 	/**
 	 * Returns a terminal escape sequence with the given style.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @param int $style Style.
 	 *
@@ -120,13 +120,13 @@ class Chalk {
 	/**
 	 * Returns the reset sequence for the given style.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @param int|null $style Style.
 	 *
 	 * @return string          Escape sequence.
 	 */
-	public static function get_reset_sequence( $style = null ) : string {
+	public static function get_reset_sequence( /* int|null */ ?int $style = null ) : string {
 		$reset_sequence = Style::get_reset_sequence();
 
 		if ( ! is_null( $style ) ) {
@@ -145,7 +145,7 @@ class Chalk {
 	/**
 	 * Allows the convenient use of methods like {@link Chalk::blue()}.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @param string $color     Color.
 	 * @param array  $arguments Arguments.
@@ -154,8 +154,8 @@ class Chalk {
 	 *
 	 * @note  The color is caSe-insensitive, and this only works for colors.
 	 */
-	public static function __callStatic( $color, $arguments ) : string {
-		$color_constant = strtoupper( $color );
+	public static function __callStatic( string $color, array $arguments ) : string {
+		$color_constant = mb_strtoupper( $color );
 		$reflection     = new \ReflectionClass( Fg_Color::class );
 
 		if ( ! $reflection->hasConstant( $color_constant ) ) {

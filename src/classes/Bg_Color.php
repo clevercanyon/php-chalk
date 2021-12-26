@@ -38,31 +38,47 @@ namespace Clever_Canyon\Chalk;
 /**
  * Background color.
  *
- * @since 1.0.0
+ * @since 2021-12-15
  */
 class Bg_Color {
-	public const NONE          = '49';
-	public const BLACK         = '40';
-	public const RED           = '41';
-	public const GREEN         = '42';
-	public const YELLOW        = '43';
-	public const BLUE          = '44';
-	public const MAGENTA       = '45';
-	public const CYAN          = '46';
-	public const LIGHT_GRAY    = '47';
-	public const DARK_GRAY     = '100';
-	public const LIGHT_RED     = '101';
-	public const LIGHT_GREEN   = '102';
-	public const LIGHT_YELLOW  = '103';
-	public const LIGHT_BLUE    = '104';
+	public const NONE = '49';
+
+	public const BLACK = '40';
+
+	public const RED = '41';
+
+	public const GREEN = '42';
+
+	public const YELLOW = '43';
+
+	public const BLUE = '44';
+
+	public const MAGENTA = '45';
+
+	public const CYAN = '46';
+
+	public const LIGHT_GRAY = '47';
+
+	public const DARK_GRAY = '100';
+
+	public const LIGHT_RED = '101';
+
+	public const LIGHT_GREEN = '102';
+
+	public const LIGHT_YELLOW = '103';
+
+	public const LIGHT_BLUE = '104';
+
 	public const LIGHT_MAGENTA = '105';
-	public const LIGHT_CYAN    = '106';
-	public const WHITE         = '107';
+
+	public const LIGHT_CYAN = '106';
+
+	public const WHITE = '107';
 
 	/**
 	 * Gets array of available colors.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @return array Available colors.
 	 */
@@ -73,7 +89,7 @@ class Bg_Color {
 	/**
 	 * Gets background color reset sequence.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @return string Background color reset sequence.
 	 */
@@ -84,9 +100,9 @@ class Bg_Color {
 	/**
 	 * Gets a background color code.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
-	 * @param  string $color Color name.
+	 * @param string $color Color name.
 	 *
 	 * @return string        Background color code.
 	 */

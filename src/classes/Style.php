@@ -38,28 +38,34 @@ namespace Clever_Canyon\Chalk;
 /**
  * Style.
  *
- * @since 1.0.0
+ * @since 2021-12-15
  */
 class Style {
-	public const NONE       = '0';
-	public const BOLD       = '1';
-	public const DIM        = '2';
+	public const NONE = '0';
+
+	public const BOLD = '1';
+
+	public const DIM = '2';
+
 	public const UNDERLINED = '4';
-	public const BLINK      = '5';
-	public const INVERTED   = '7';
-	public const HIDDEN     = '8';
+
+	public const BLINK = '5';
+
+	public const INVERTED = '7';
+
+	public const HIDDEN = '8';
 
 	/**
 	 * Escape sequence.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 */
 	protected string $escape_sequence = '';
 
 	/**
 	 * Compiles the given styles into a single escape sequence.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @param int|array $styles Styles.
 	 */
@@ -72,7 +78,7 @@ class Style {
 	/**
 	 * Sets style by recompiling escape sequence.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @param int|array $styles Styles.
 	 */
@@ -84,7 +90,7 @@ class Style {
 	/**
 	 * Appends style(s) to escape sequence.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @param int|array $styles Styles.
 	 */
@@ -97,7 +103,7 @@ class Style {
 	/**
 	 * Gets escape sequence.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @return string Escape sequence.
 	 */
@@ -108,7 +114,7 @@ class Style {
 	/**
 	 * Gets array of available colors.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @return array Available colors.
 	 */
@@ -119,7 +125,7 @@ class Style {
 	/**
 	 * Gets style reset sequence.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @return string Style reset sequence.
 	 */
@@ -130,9 +136,9 @@ class Style {
 	/**
 	 * Gets a style code.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
-	 * @param  string $style Style name.
+	 * @param string $style Style name.
 	 *
 	 * @return string        Style code.
 	 */

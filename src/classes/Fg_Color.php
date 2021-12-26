@@ -38,31 +38,47 @@ namespace Clever_Canyon\Chalk;
 /**
  * Foreground color.
  *
- * @since 1.0.0
+ * @since 2021-12-15
  */
 class Fg_Color {
-	public const NONE          = '39';
-	public const BLACK         = '30';
-	public const RED           = '31';
-	public const GREEN         = '32';
-	public const YELLOW        = '33';
-	public const BLUE          = '34';
-	public const MAGENTA       = '35';
-	public const CYAN          = '36';
-	public const LIGHT_GRAY    = '37';
-	public const DARK_GRAY     = '90';
-	public const LIGHT_RED     = '91';
-	public const LIGHT_GREEN   = '92';
-	public const LIGHT_YELLOW  = '93';
-	public const LIGHT_BLUE    = '94';
+	public const NONE = '39';
+
+	public const BLACK = '30';
+
+	public const RED = '31';
+
+	public const GREEN = '32';
+
+	public const YELLOW = '33';
+
+	public const BLUE = '34';
+
+	public const MAGENTA = '35';
+
+	public const CYAN = '36';
+
+	public const LIGHT_GRAY = '37';
+
+	public const DARK_GRAY = '90';
+
+	public const LIGHT_RED = '91';
+
+	public const LIGHT_GREEN = '92';
+
+	public const LIGHT_YELLOW = '93';
+
+	public const LIGHT_BLUE = '94';
+
 	public const LIGHT_MAGENTA = '95';
-	public const LIGHT_CYAN    = '96';
-	public const WHITE         = '97';
+
+	public const LIGHT_CYAN = '96';
+
+	public const WHITE = '97';
 
 	/**
 	 * Gets array of available colors.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @return array Available colors.
 	 */
@@ -73,7 +89,7 @@ class Fg_Color {
 	/**
 	 * Gets foreground color reset sequence.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
 	 * @return string Foreground color reset sequence.
 	 */
@@ -84,9 +100,9 @@ class Fg_Color {
 	/**
 	 * Gets a foreground color code.
 	 *
-	 * @since 1.0.0
+	 * @since 2021-12-15
 	 *
-	 * @param  string $color Color name.
+	 * @param string $color Color name.
 	 *
 	 * @return string        Foreground color code.
 	 */
