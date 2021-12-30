@@ -33,6 +33,7 @@
  * @license            MIT
  * @link               https://github.com/clevercanyon/php-chalk
  */
+declare( strict_types = 1 ); // ｡･:*:･ﾟ★.
 namespace Clever_Canyon\Chalk;
 
 /**
@@ -41,18 +42,39 @@ namespace Clever_Canyon\Chalk;
  * @since 2021-12-15
  */
 class Style {
+	/**
+	 * No style.
+	 */
 	public const NONE = '0';
 
+	/**
+	 * Bold style.
+	 */
 	public const BOLD = '1';
 
+	/**
+	 * Dim style.
+	 */
 	public const DIM = '2';
 
+	/**
+	 * Underlined style.
+	 */
 	public const UNDERLINED = '4';
 
+	/**
+	 * Blink style.
+	 */
 	public const BLINK = '5';
 
+	/**
+	 * Inverted style.
+	 */
 	public const INVERTED = '7';
 
+	/**
+	 * Hidden style.
+	 */
 	public const HIDDEN = '8';
 
 	/**

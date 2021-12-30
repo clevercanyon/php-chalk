@@ -33,6 +33,7 @@
  * @license            MIT
  * @link               https://github.com/clevercanyon/php-chalk
  */
+declare( strict_types = 1 ); // ｡･:*:･ﾟ★.
 namespace Clever_Canyon\Chalk;
 
 /**
@@ -41,38 +42,89 @@ namespace Clever_Canyon\Chalk;
  * @since 2021-12-15
  */
 class Fg_Color {
+	/**
+	 * No color.
+	 */
 	public const NONE = '39';
 
+	/**
+	 * Black color.
+	 */
 	public const BLACK = '30';
 
+	/**
+	 * Red color.
+	 */
 	public const RED = '31';
 
+	/**
+	 * Green color.
+	 */
 	public const GREEN = '32';
 
+	/**
+	 * Yellow color.
+	 */
 	public const YELLOW = '33';
 
+	/**
+	 * Blue color.
+	 */
 	public const BLUE = '34';
 
+	/**
+	 * Magenta color.
+	 */
 	public const MAGENTA = '35';
 
+	/**
+	 * Cyan color.
+	 */
 	public const CYAN = '36';
 
+	/**
+	 * Light gray color.
+	 */
 	public const LIGHT_GRAY = '37';
 
+	/**
+	 * Dark gray color.
+	 */
 	public const DARK_GRAY = '90';
 
+	/**
+	 * Light red color.
+	 */
 	public const LIGHT_RED = '91';
 
+	/**
+	 * Light green color.
+	 */
 	public const LIGHT_GREEN = '92';
 
+	/**
+	 * Light yellow color.
+	 */
 	public const LIGHT_YELLOW = '93';
 
+	/**
+	 * Light blue color.
+	 */
 	public const LIGHT_BLUE = '94';
 
+	/**
+	 * Light magenta color.
+	 */
 	public const LIGHT_MAGENTA = '95';
 
+	/**
+	 * Light cyan color.
+	 */
 	public const LIGHT_CYAN = '96';
 
+	/**
+	 * White color.
+	 */
 	public const WHITE = '97';
 
 	/**

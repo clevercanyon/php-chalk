@@ -33,6 +33,7 @@
  * @license            MIT
  * @link               https://github.com/clevercanyon/php-chalk
  */
+declare( strict_types = 1 ); // ｡･:*:･ﾟ★.
 namespace Clever_Canyon\Chalk;
 
 /**
@@ -53,12 +54,12 @@ class Chalk {
 	 *
 	 * @since 2021-12-15
 	 *
-	 * @param string          $string String.
-	 * @param int|array|Style $style  Styles.
+	 * @param string             $string String.
+	 * @param string|array|Style $style  Styles.
 	 *
-	 * @return string                  Styled string.
+	 * @return string Styled string.
 	 */
-	public static function style( string $string, $style ) : string {
+	public static function style( string $string, /* string|array|Style */ $style ) : string {
 		$style           = is_array( $style ) ? new Style( $style ) : $style;
 		$escape_sequence = $style instanceof Style ? $style->get_escape_sequence() : static::get_escape_sequence( $style );
 		$reset_sequence  = $style instanceof Style ? Style::get_reset_sequence() : static::get_reset_sequence( $style );
@@ -109,12 +110,12 @@ class Chalk {
 	 *
 	 * @since 2021-12-15
 	 *
-	 * @param int $style Style.
+	 * @param string $style Style.
 	 *
 	 * @return string     Escape sequence.
 	 */
-	public static function get_escape_sequence( int $style ) : string {
-		return str_replace( 'STYLE', (string) $style, static::ESCAPE_SEQUENCE );
+	public static function get_escape_sequence( string $style ) : string {
+		return str_replace( 'STYLE', $style, static::ESCAPE_SEQUENCE );
 	}
 
 	/**
