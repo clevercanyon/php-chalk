@@ -154,17 +154,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/php-js-standards.git",
-                "reference": "eaeb82d0e1670b458d28e7b46ac92c7131f3742c"
+                "reference": "c73f849a008d5569bff963f85a7091b7e7dd5e2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/php-js-standards/zipball/eaeb82d0e1670b458d28e7b46ac92c7131f3742c",
-                "reference": "eaeb82d0e1670b458d28e7b46ac92c7131f3742c",
+                "url": "https://api.github.com/repos/clevercanyon/php-js-standards/zipball/c73f849a008d5569bff963f85a7091b7e7dd5e2b",
+                "reference": "c73f849a008d5569bff963f85a7091b7e7dd5e2b",
                 "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-                "php": "^7.4 || ^8.0",
+                "php": "^7.4 || ^8.0 || ^8.1",
                 "phpcompatibility/php-compatibility": "^9.3",
                 "phpcompatibility/phpcompatibility-wp": "^2.1",
                 "squizlabs/php_codesniffer": "^3.6",
@@ -203,7 +203,7 @@
                 "issues": "https://github.com/clevercanyon/php-js-standards/issues",
                 "source": "https://github.com/clevercanyon/php-js-standards/tree/main"
             },
-            "time": "2022-01-02T02:30:47+00:00"
+            "time": "2022-01-02T14:08:29+00:00"
         },
         {
             "name": "clevercanyon/php-js-utilities",
