@@ -18,38 +18,20 @@
 	"prefer-stable"     : true,
 	"minimum-stability" : "dev",
 	"config"            : {
+		"platform"      : {
+			"php-64bit" : "7.4.0"
+		},
 		"allow-plugins" : {
-			"dealerdirect/phpcodesniffer-composer-installer": true,
-			"composer/package-versions-deprecated": true
+			"dealerdirect/phpcodesniffer-composer-installer" : true,
+			"composer/package-versions-deprecated"           : true
 		}
 	},
 	"require"           : {
-		"php" : "^7.4 || ^8.0 || ^8.1"
+		"php-64bit" : "^7.4 || ^8.0 || ^8.1"
 	},
 	"autoload"          : {
 		"psr-4" : {
 			"Clever_Canyon\\Chalk\\" : "./src/classes"
-		}
-	},
-	"require-dev"       : {
-		"clevercanyon/php-js-utilities-dev" : "dev-main"
-	},
-	"autoload-dev"      : {
-		"psr-4" : {
-			"Clever_Canyon\\Chalk__Tests\\" : "./tests/classes"
-		}
-	},
-	"scripts"           : {
-		"post-update-cmd"   : [
-			"[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/php-js-utilities-dev/src/toolchain/composer/post-update-cmd.php"
-		],
-		"run-project-tests" : [
-			"./vendor/bin/phpunit --configuration ./.phpunit.xml --testsuite tests"
-		]
-	},
-	"extra"             : {
-		"clevercanyon" : {
-			"$extends-packages" : [ "clevercanyon/php-js-utilities-dev" ]
 		}
 	}
 }
