@@ -89,10 +89,12 @@ class Style {
 	 *
 	 * @since 2021-12-15
 	 *
-	 * @param int|array $styles Styles.
+	 * @param string|array|null $styles Styles.
 	 */
-	public function __construct( $styles = null ) {
-		if ( ! is_null( $styles ) ) {
+	public function __construct( /* string|array|null */ $styles = null ) {
+		assert( is_string( $styles ) || is_array( $styles ) || null === $styles );
+
+		if ( null !== $styles ) {
 			$this->set_style( $styles );
 		}
 	}
@@ -102,9 +104,11 @@ class Style {
 	 *
 	 * @since 2021-12-15
 	 *
-	 * @param int|array $styles Styles.
+	 * @param string|array $styles Styles.
 	 */
 	public function set_style( $styles ) : void {
+		assert( is_string( $styles ) || is_array( $styles ) );
+
 		$this->escape_sequence = '';
 		$this->add_style( $styles );
 	}
@@ -114,11 +118,13 @@ class Style {
 	 *
 	 * @since 2021-12-15
 	 *
-	 * @param int|array $styles Styles.
+	 * @param string|array $styles Styles.
 	 */
 	public function add_style( $styles ) : void {
-		foreach ( (array) $styles as $style ) {
-			$this->escape_sequence .= Chalk::get_escape_sequence( $style );
+		assert( is_string( $styles ) || is_array( $styles ) );
+
+		foreach ( (array) $styles as $_style ) {
+			$this->escape_sequence .= Chalk::get_escape_sequence( $_style );
 		}
 	}
 
@@ -165,7 +171,7 @@ class Style {
 	 * @return string        Style code.
 	 */
 	public static function code( string $style ) : string {
-		switch ( strtolower( $style ) ) {
+		switch ( mb_strtolower( $style ) ) {
 			case 'bold':
 			case 'bright':
 				return static::BOLD;

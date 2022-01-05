@@ -159,7 +159,7 @@ class Fg_Color {
 	 * @return string        Foreground color code.
 	 */
 	public static function code( string $color ) : string {
-		switch ( strtolower( $color ) ) {
+		switch ( mb_strtolower( $color ) ) {
 			case 'black':
 				return static::BLACK;
 			case 'red':
