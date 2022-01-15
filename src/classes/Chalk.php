@@ -33,7 +33,7 @@
  * @license            MIT
  * @link               https://github.com/clevercanyon/php-chalk
  */
-declare( strict_types = 1 ); // ｡･:*:･ﾟ★.
+declare( strict_types = 1 );
 namespace Clever_Canyon\Chalk;
 
 /**
